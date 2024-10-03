@@ -2,25 +2,19 @@ let nome = []
 let nota = []
 let media = 0
 
-for(let i=0; i<2; i++){
+for(let i=0; i<5; i++){
     
-    nome = prompt("Insira seu nome")
-    nota = prompt("Insira sua nota")
-    
-    
+    nome[i] = prompt("Insira seu nome")
+    nota[i] = parseFloat(prompt("Insira sua nota"))
 }
 
-for(i=0; i<2; i++){
+for(i=0; i<5; i++){
     media += nota[i]
+} 
+    media = media/5
 
-    
-    media = media/2
-
-    if(nota[i] < media){
-        console.log(`${nome[i]}  está abaixo da media`)
-
-    }else if(nota[i] > media){
-        console.log(`${nome[i]}  está acima da media`)
+    for(let i = 0; i < 5; i++){
+        if(nota[i] < media){
+            console.log(`${nome[i]} está abaixo da média`)
+        }
     }
-
-}
